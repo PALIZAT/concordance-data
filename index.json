@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "generated": "2026-08-23",
+  "files": {
+    "games": "db/games.jsonl",
+    "links": "db/links.jsonl"
+  },
+  "counts": {
+    "games": 190598,
+    "links": 175488
+  },
+  "note": "Canonical games and store links. Seeded from IGDB; identity, naming and grouping are ours from here on."
+}

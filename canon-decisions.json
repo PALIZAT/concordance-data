@@ -1,0 +1,28 @@
+{
+  "version": 7,
+  "updated": "2026-08-23",
+  "note": "Curated decisions that override the catalogue. Keys are store-prefixed (steam:236430) so PlayStation entries can join later.",
+  "merges": [],
+  "separate": [],
+  "hidden": [],
+  "storeOnly": [
+    "steam:205930"
+  ],
+  "storeOnlyNote": "Owned and shown on the store's own shelf, but not a game Home should list. Hitman: Sniper Challenge was a pre-order promo; IGDB has no record of it.",
+  "alsoCountsAs": {
+    "steam:1659040": [
+      "steam:236870",
+      "steam:863550"
+    ]
+  },
+  "alsoCountsAsNote": "One store entry that is really several games. IGDB records HITMAN World of Assassination as plain Hitman 3, but since 2023 that purchase carries Hitman (2016) and Hitman 2 as well, so it counts as a copy of each. Values name any store entry belonging to the game meant; the app follows it to that game.",
+  "titles": {
+    "igdb:170742": "Mega Man 2"
+  },
+  "titlesNote": "Corrects a canonical name. The catalogue names a game by its earliest release, which for Japanese games is the Japanese title — Mega Man 2 is filed as 'Rockman 2: Dr. Wily no Nazo'. The date stays as it is; only the name changes.",
+  "links": {
+    "psn:NPWR01249_00": "demons-souls-2009",
+    "psn:NPWR01813_00": "need-for-speed-most-wanted-2012"
+  },
+  "linksNote": "Which canonical game a store entry is, where the name alone is ambiguous. Both of these are PS3 discs: Demon's Souls is the 2009 game rather than the 2020 remake, and Most Wanted is Criterion's 2012 game rather than the 2005 one."
+}
