@@ -1,7 +1,10 @@
 {
-  "version": 1,
+  "version": 2,
   "generated": "2026-08-23",
+  "note": "Check version before downloading anything else: it changes only when the data does.",
   "files": {
+    "catalog": "catalog.json",
+    "decisions": "canon-decisions.json",
     "games": "db/games.jsonl",
     "links": "db/links.jsonl"
   },
@@ -9,5 +12,7 @@
     "games": 190598,
     "links": 175488
   },
-  "note": "Canonical games and store links. Seeded from IGDB; identity, naming and grouping are ours from here on."
+  "sizes": {
+    "catalog": 17327612
+  }
 }
