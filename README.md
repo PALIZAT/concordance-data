@@ -17,6 +17,11 @@ which.
 | `db/links.jsonl` | One store entry per line, and the game it belongs to |
 | `canon-decisions.json` | Human corrections, applied on top of everything else |
 | `index.json` | Version and file list, so the app can check cheaply |
+| `catalog.json` | The two files above packed into the one an app downloads |
+
+**[FORMAT.md](FORMAT.md) is the contract**: every field, what it means, and how
+an application keeps itself up to date. Read that before writing anything that
+consumes this.
 
 One record per line, so correcting a single game shows up as a single changed
 line rather than a rewritten file.
