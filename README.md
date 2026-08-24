@@ -4,10 +4,10 @@ The canonical game database behind [Concordance](https://github.com/PALIZAT/conc
 kept here so the app can update it without shipping a new version.
 
 A concordance is an index that gathers every variant of a thing under one entry.
-That is what this is: Steam sells *CHRONO TRIGGER*, PlayStation calls its trophy
-set `NPWR01249_00`, and a shelf somewhere holds *Dark Souls II: Scholar of the
-First Sin*. All of them are entries pointing at one game, and this database says
-which.
+
+Dark Souls II is sold on Steam twice — the original, and Scholar of the First
+Sin — and a PS3 disc of it carries a trophy set under an id that means nothing
+to either. Three entries, one game. This database is what says so.
 
 ## Files
 
