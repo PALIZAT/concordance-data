@@ -1,13 +1,18 @@
 # Concordance data
 
-The canonical game database behind [Concordance](https://github.com/PALIZAT/concordance),
-kept here so the app can update it without shipping a new version.
-
-A concordance is an index that gathers every variant of a thing under one entry.
+A database of games, and of which store entries belong to which game.
 
 Dark Souls II is sold on Steam twice — the original, and Scholar of the First
 Sin — and a PS3 disc of it carries a trophy set under an id that means nothing
-to either. Three entries, one game. This database is what says so.
+to either. Three entries, one game. This is what says so.
+
+Every store counts its own way and none of them agree, so anything that reads
+more than one of them has to decide what counts as the same game. That decision
+is what lives here: 190,700 games, 175,589 store entries pointing at them, and
+a list of corrections made by hand where no rule was good enough.
+
+It is published rather than bundled, so that a wrong date or a bad grouping can
+be fixed for everyone without anything being reinstalled.
 
 ## Files
 
@@ -16,7 +21,7 @@ to either. Three entries, one game. This database is what says so.
 | `db/games.jsonl` | One canonical game per line: id, name, release date |
 | `db/links.jsonl` | One store entry per line, and the game it belongs to |
 | `canon-decisions.json` | Human corrections, applied on top of everything else |
-| `index.json` | Version and file list, so the app can check cheaply |
+| `index.json` | Version and file list, so a reader can check cheaply |
 | `catalog.json` | The two files above packed into the one an app downloads |
 
 **[FORMAT.md](FORMAT.md) is the contract**: every field, what it means, and how
@@ -46,10 +51,17 @@ overwritten by a machine.
 
 ## Corrections
 
-Grouping decisions in `canon-decisions.json` are curated: they override both the
-database and whatever the app works out on its own. If something is grouped
-wrongly, that file is where it gets fixed — and the fix reaches everyone the
-next time their app checks in.
+Grouping decisions in `canon-decisions.json` are made by hand and override
+everything else. Some questions have no rule that answers them: two games are
+called Demon's Souls, and only a person can say which one a particular disc is.
+If something is grouped wrongly, that file is where it gets fixed — and the fix
+reaches every reader the next time it checks in.
+
+## What reads it
+
+[Concordance](https://github.com/PALIZAT/concordance), a game tracker for macOS
+and Windows, which is what this was built for. Nothing stops anything else
+from reading it — [FORMAT.md](FORMAT.md) is written for that.
 
 ## Licence
 
