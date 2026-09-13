@@ -54,8 +54,15 @@ Every canonical game, and the store entries belonging to each. Around 17 MB.
 | `c` | artwork id. Absent today: there is no cover database yet |
 | `e` | store entries, `[id]` or `[id, role]`. A missing role means Base |
 | `p` | consoles it came out on, counting every version folded into it. Absent when none are known |
+| `k` | other stores' own keys that are this game, whole: `["epic:fn"]`. Absent when none |
 
-The ids in `e` are Steam app ids. Nothing else appears there yet.
+The ids in `e` are Steam app ids. Other stores that name a game by an id of
+their own are in `k`, prefix and all. Today that is Epic, by namespace: Epic
+publishes which store page each namespace sells, IGDB records the same page,
+and a namespace is listed only where that page leads to exactly one canonical
+game. Where it leads to two — a game and its Deluxe Edition, typically — it is
+left out rather than guessed, and an application may still match the copy by
+a name only one game answers to.
 
 Consoles in `p`: `ps1`, `ps2`, `ps3`, `ps4`, `ps5`, `psp`, `vita`, `psvr`,
 `psvr2`, `switch`, `switch2`. Only consoles, because they are only used to
@@ -81,8 +88,9 @@ Decisions made by a person, applied on top of everything else. This is where a
 mistake gets fixed, and the fix reaches everyone the next time their app
 checks in.
 
-Keys are store-prefixed — `steam:236430`, `psn:NPWR01249_00` — except where a
-canonical game is named, and then the key is its id: `demons-souls-2009`.
+Keys are store-prefixed — `steam:236430`, `psn:NPWR01249_00`,
+`nintendo:0100d870045b6000`, `epic:fn` — except where a canonical game is
+named, and then the key is its id: `demons-souls-2009`.
 
 | Section | Shape | Meaning |
 |---|---|---|

@@ -1,5 +1,5 @@
 {
-  "version": 6,
+  "version": 7,
   "generated": "2026-09-13",
   "note": "Check version before downloading anything else: it changes only when the data does.",
   "files": {
@@ -10,9 +10,9 @@
   },
   "counts": {
     "games": 198089,
-    "links": 175589
+    "links": 176544
   },
   "sizes": {
-    "catalog": 18836810
+    "catalog": 18879033
   }
 }
