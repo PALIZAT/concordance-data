@@ -1,6 +1,6 @@
 {
-  "version": 5,
-  "generated": "2026-08-24",
+  "version": 6,
+  "generated": "2026-09-13",
   "note": "Check version before downloading anything else: it changes only when the data does.",
   "files": {
     "catalog": "catalog.json",
@@ -9,10 +9,10 @@
     "links": "db/links.jsonl"
   },
   "counts": {
-    "games": 190700,
+    "games": 198089,
     "links": 175589
   },
   "sizes": {
-    "catalog": 17335920
+    "catalog": 18836810
   }
 }

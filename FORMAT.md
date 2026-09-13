@@ -53,8 +53,13 @@ Every canonical game, and the store entries belonging to each. Around 17 MB.
 | `d` | earliest release anywhere, `YYYY-MM-DD`. Absent when unknown |
 | `c` | artwork id. Absent today: there is no cover database yet |
 | `e` | store entries, `[id]` or `[id, role]`. A missing role means Base |
+| `p` | consoles it came out on, counting every version folded into it. Absent when none are known |
 
 The ids in `e` are Steam app ids. Nothing else appears there yet.
+
+Consoles in `p`: `ps1`, `ps2`, `ps3`, `ps4`, `ps5`, `psp`, `vita`, `psvr`,
+`psvr2`, `switch`, `switch2`. Only consoles, because they are only used to
+match a copy by name; a Steam entry is matched by its id and needs none.
 
 Roles: `Base`, `Remaster`, `Port`, `Expanded Edition`, `Remake`, `VR`,
 `Bundle`. They describe the entry, never the game: Devil May Cry 4: Special
@@ -99,9 +104,13 @@ purchase carries Hitman and Hitman 2 as well, so it counts as a copy of all
 three.
 
 `links` — PlayStation gives no id any catalogue shares, so a copy is matched
-by name, and only when exactly one game answers to that name. Two games are
-called Demon's Souls; a person says which one the PS3 disc is. Never guess:
-matching by similarity was tried and paired ICO with a game called Tico.
+by name, and only when exactly one game answers to that name. When several
+do, the console the copy was played on narrows them using `p`: two games are
+called Demon's Souls, and only one of them ever came out on a PS3. The console
+only takes candidates away — it never adds one, and never overrules a name
+that already had a single answer. If two are still left, or none, the copy
+stands alone until a person says which it is, here. Never guess: matching by
+similarity was tried and paired ICO with a game called Tico.
 
 ## `db/games.jsonl` and `db/links.jsonl`
 
@@ -115,8 +124,9 @@ reviewed and corrected by people.
 {"key": "steam:211600", "game": "thief-the-dark-project-1998", "role": "Expanded Edition"}
 ```
 
-A record may also carry `pinned` (fields an import must not touch), `retired`
-(the date it disappeared from the source — kept, never deleted) and `added`.
+A record may also carry `consoles` (published as `p` above), `pinned` (fields
+an import must not touch), `retired` (the date it disappeared from the source —
+kept, never deleted) and `added`.
 
 ## What is not in the data
 
